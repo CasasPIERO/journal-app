@@ -7,13 +7,17 @@ import { AppTheme } from './theme'
 
 import './index.css'
 import App from './App.tsx'
+import { Provider } from 'react-redux'
+import { store } from './store'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter>
-      <AppTheme>
-        <App />
-      </AppTheme>
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <AppTheme>
+          <App />
+        </AppTheme>
+      </BrowserRouter>
+    </Provider>
   </StrictMode>,
 )

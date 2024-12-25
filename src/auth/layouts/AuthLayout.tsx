@@ -36,9 +36,7 @@ export const AuthLayout = ({ children, title, helperLink }: AuthLayoutProps) => 
         <Typography variant='h4' align='center' gutterBottom>
           {title}
         </Typography> 
-        <form>
-          {children}
-        </form>
+        {children}
         { helperLink && (
             <Grid display="flex" justifyContent="flex-end" sx={{ mt: 2}}>
                 <Link component={RouterLink} to={helperLink.link}>
